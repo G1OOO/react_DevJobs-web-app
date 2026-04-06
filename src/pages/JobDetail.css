@@ -1,0 +1,221 @@
+.detail-header-bg {
+  margin-bottom: 0;
+}
+
+.detail-container {
+  max-width: 730px;
+  margin: -40px auto 80px;
+  padding: 0 24px;
+  position: relative;
+  z-index: 5;
+}
+
+body {
+  padding-bottom: 120px;
+}
+
+.requirements-list li::marker {
+  color: #5964e0;
+}
+
+.role-list li::marker {
+  color: #5964e0;
+  font-weight: 700;
+}
+.detail-container {
+  max-width: 730px;
+  margin: -40px auto 100px;
+  padding: 0 24px;
+  position: relative;
+  z-index: 10;
+}
+
+.company-header-card {
+  background: white;
+  display: flex;
+  align-items: center;
+  height: 140px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+body.dark-theme .company-header-card {
+  background-color: #19202d;
+}
+
+.logo-square {
+  width: 140px;
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+
+.logo-square img {
+  width: 80px;
+}
+
+.header-text {
+  padding-left: 40px;
+  flex-grow: 1;
+}
+
+.header-text h2 {
+  font-size: 24px;
+  color: #19202d;
+  margin-bottom: 8px;
+}
+
+.header-text p {
+  color: #6e8098;
+}
+
+body.dark-theme .header-text h2 {
+  color: white;
+}
+
+.company-site-btn {
+  margin-right: 40px;
+  padding: 16px 20px;
+  background-color: rgba(89, 100, 224, 0.1);
+  color: #5964e0;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+body.dark-theme .company-site-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.job-content-card {
+  background: white;
+  margin-top: 32px;
+  padding: 48px;
+  border-radius: 6px;
+}
+
+body.dark-theme .job-content-card {
+  background-color: #19202d;
+}
+
+.content-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.title-group .meta {
+  color: #6e8098;
+  margin-bottom: 8px;
+}
+
+.title-group h1 {
+  font-size: 28px;
+  color: #19202d;
+  margin-bottom: 8px;
+}
+
+.title-group .location {
+  color: #5964e0;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+body.dark-theme .title-group h1 {
+  color: white;
+}
+
+.description {
+  line-height: 1.8;
+  color: #6e8098;
+  margin-bottom: 40px;
+}
+
+.section {
+  margin-top: 40px;
+}
+
+.section h3 {
+  color: #19202d;
+  margin-bottom: 24px;
+}
+
+body.dark-theme .section h3 {
+  color: white;
+}
+
+.section p {
+  color: #6e8098;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.section ul,
+.section ol {
+  padding-left: 16px;
+  color: #6e8098;
+}
+
+.section li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  padding-left: 20px;
+}
+
+.section li::marker {
+  color: #5964e0;
+  font-weight: 700;
+}
+
+.detail-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding: 24px 0;
+}
+
+body.dark-theme .detail-footer {
+  background-color: #19202d;
+}
+
+.footer-content {
+  max-width: 730px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.footer-text h3 {
+  color: #19202d;
+  margin-bottom: 5px;
+}
+
+.footer-text p {
+  color: #6e8098;
+}
+
+body.dark-theme .footer-text h3 {
+  color: white;
+}
+
+.apply-now-btn {
+  background-color: #5964e0;
+  color: white;
+  border: none;
+  padding: 16px 30px;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.apply-now-btn:hover {
+  background-color: #939bf4;
+}
