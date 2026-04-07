@@ -172,6 +172,12 @@ body.dark-theme .custom-check label {
   cursor: pointer;
   transition: background 0.2s;
 }
+.btn-search:hover {
+  background: #939bf4;
+}
+.btn-search:active {
+  background: #5964e0;
+}
 .btn-load {
   background: #5964e0;
   color: white;
@@ -185,11 +191,10 @@ body.dark-theme .custom-check label {
   margin-left: 45%;
   margin-top: 5%;
 }
-
-.btn-search:hover {
+.btn-load:hover {
   background: #939bf4;
 }
-.btn-search:active {
+.btn-load:active {
   background: #5964e0;
 }
 
