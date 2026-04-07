@@ -219,3 +219,62 @@ body.dark-theme .footer-text h3 {
 .apply-now-btn:hover {
   background-color: #939bf4;
 }
+@media (max-width: 700px) {
+  .detail-container {
+    margin-top: -15px;
+    padding: 0 24px;
+  }
+
+  .company-header-card {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding-bottom: 32px;
+    overflow: visible;
+  }
+
+  .logo-square {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    margin-top: -25px;
+  }
+
+  .logo-square img {
+    max-width: 25px;
+  }
+
+  .header-text {
+    padding: 24px 0;
+  }
+
+  .company-site-btn {
+    margin-right: 0;
+  }
+
+  .job-content-card {
+    padding: 40px 24px;
+  }
+
+  .content-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+  }
+
+  .content-top .apply-now-btn {
+    width: 100%;
+  }
+
+  .footer-text {
+    display: none; /* Hide position title in footer on mobile */
+  }
+
+  .detail-footer .apply-now-btn {
+    width: 100%;
+  }
+
+  .footer-content {
+    padding: 0 24px;
+  }
+}

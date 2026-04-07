@@ -10,6 +10,7 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   background-color: #f4f6f8;
   transition: background-color 0.2s ease;
+  height: 98vh;
 }
 
 body.dark-theme {
@@ -171,6 +172,19 @@ body.dark-theme .custom-check label {
   cursor: pointer;
   transition: background 0.2s;
 }
+.btn-load {
+  background: #5964e0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 14px 28px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-left: 45%;
+  margin-top: 5%;
+}
 
 .btn-search:hover {
   background: #939bf4;
@@ -263,4 +277,46 @@ body.dark-theme .job-title {
   font-size: 14px;
   font-weight: 700;
   margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    padding: 45px 24px 0;
+  }
+
+  .filters-bar {
+    width: 90%;
+  }
+
+  .filter-line,
+  .location-input,
+  .custom-check label {
+    display: none;
+  }
+
+  .filter-section.search-input {
+    flex: 2;
+  }
+
+  .check-section {
+    flex: 0;
+    padding: 0 16px;
+  }
+
+  .btn-search {
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content-area {
+    padding: 80px 24px 60px;
+  }
+
+  .btn-load {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 }

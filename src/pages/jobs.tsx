@@ -101,6 +101,7 @@ export default function Jobs() {
             <p className="no-results">No jobs found matching your criteria.</p>
           )}
         </div>
+          <button className="btn-load">Load More</button>
       </main>
     </div>
   );
