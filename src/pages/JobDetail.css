@@ -4,28 +4,8 @@
 
 .detail-container {
   max-width: 730px;
-  margin: -40px auto 80px;
-  padding: 0 24px;
-  position: relative;
-  z-index: 5;
-}
-
-body {
-  padding-bottom: 120px;
-}
-
-.requirements-list li::marker {
-  color: #5964e0;
-}
-
-.role-list li::marker {
-  color: #5964e0;
-  font-weight: 700;
-}
-.detail-container {
-  max-width: 730px;
-  margin: -40px auto 100px;
-  padding: 0 24px;
+  margin: -40px auto 0;
+  padding: 0 24px 100px;
   position: relative;
   z-index: 10;
 }
@@ -171,9 +151,7 @@ body.dark-theme .section h3 {
 }
 
 .detail-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   background: white;
   padding: 24px 0;
@@ -195,6 +173,7 @@ body.dark-theme .detail-footer {
 .footer-text h3 {
   color: #19202d;
   margin-bottom: 5px;
+  font-size: 20px;
 }
 
 .footer-text p {
@@ -219,10 +198,13 @@ body.dark-theme .footer-text h3 {
 .apply-now-btn:hover {
   background-color: #939bf4;
 }
+.apply-now-btn:active {
+  background-color: #5964e0;
+}
 @media (max-width: 700px) {
   .detail-container {
     margin-top: -15px;
-    padding: 0 24px;
+    padding: 0 24px 60px;
   }
 
   .company-header-card {
@@ -267,7 +249,7 @@ body.dark-theme .footer-text h3 {
   }
 
   .footer-text {
-    display: none; /* Hide position title in footer on mobile */
+    display: none;
   }
 
   .detail-footer .apply-now-btn {

@@ -1,28 +1,40 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import sun from "../../public/images/desktop/icon-sun.svg";
-import moon from "../../public/images/desktop/icon-moon.svg";
-import searchIcon from "../../public/images/desktop/icon-search.svg";
-import map from "../../public/images/desktop/icon-location.svg";
 import data from "../data.json";
 import "./jobs.css";
 
+const sun = "/images/desktop/icon-sun.svg";
+const moon = "/images/desktop/icon-moon.svg";
+const searchIcon = "/images/desktop/icon-search.svg";
+const map = "/images/desktop/icon-location.svg";
+
 export default function Jobs() {
   const [isDark, setIsDark] = useState(false);
-  const [search, setSearch] = useState("");
-  const [location, setLocation] = useState("");
-  const [isFullTime, setIsFullTime] = useState(false);
+
+  const [searchInput, setSearchInput] = useState("");
+  const [locationInput, setLocationInput] = useState("");
+  const [isFullTimeInput, setIsFullTimeInput] = useState(false);
+
+  const [activeSearch, setActiveSearch] = useState("");
+  const [activeLocation, setActiveLocation] = useState("");
+  const [activeFullTime, setActiveFullTime] = useState(false);
 
   useEffect(() => {
     document.body.classList.toggle("dark-theme", isDark);
   }, [isDark]);
 
-  let filteredJobs = data.filter((job) => {
+  const handleSearch = () => {
+    setActiveSearch(searchInput);
+    setActiveLocation(locationInput);
+    setActiveFullTime(isFullTimeInput);
+  };
+
+  const filteredJobs = data.filter((job) => {
     const matchesSearch =
-      job.position.toLowerCase().includes(search.toLowerCase()) ||
-      job.company.toLowerCase().includes(search.toLowerCase());
-    const matchesLocation = job.location.toLowerCase().includes(location.toLowerCase());
-    const matchesType = isFullTime ? job.contract === "Full Time" : true;
+      job.position.toLowerCase().includes(activeSearch.toLowerCase()) ||
+      job.company.toLowerCase().includes(activeSearch.toLowerCase());
+    const matchesLocation = job.location.toLowerCase().includes(activeLocation.toLowerCase());
+    const matchesType = activeFullTime ? job.contract === "Full Time" : true;
 
     return matchesSearch && matchesLocation && matchesType;
   });
@@ -47,8 +59,8 @@ export default function Jobs() {
             <input
               type="text"
               placeholder="Filter by title, companies..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
             />
           </div>
           <div className="filter-line"></div>
@@ -57,8 +69,8 @@ export default function Jobs() {
             <input
               type="text"
               placeholder="Filter by location..."
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
+              value={locationInput}
+              onChange={(e) => setLocationInput(e.target.value)}
             />
           </div>
           <div className="filter-line"></div>
@@ -67,12 +79,14 @@ export default function Jobs() {
               <input
                 type="checkbox"
                 id="fulltime"
-                checked={isFullTime}
-                onChange={(e) => setIsFullTime(e.target.checked)}
+                checked={isFullTimeInput}
+                onChange={(e) => setIsFullTimeInput(e.target.checked)}
               />
               <label htmlFor="fulltime">Full Time Only</label>
             </div>
-            <button className="btn-search">Search</button>
+            <button className="btn-search" onClick={handleSearch}>
+              Search
+            </button>
           </div>
         </div>
       </header>
@@ -83,7 +97,10 @@ export default function Jobs() {
             filteredJobs.map((job) => (
               <Link to={`/jobs/${job.id}`} className="job-card-link" key={job.id}>
                 <div className="job-card">
-                  <div className="logo-container" style={{ backgroundColor: job.logoBackground }}>
+                  <div
+                    className="logo-container"
+                    style={{ backgroundColor: job.logoBackground }}
+                  >
                     <img src={job.logo} alt={job.company} />
                   </div>
                   <div className="card-body">
@@ -101,7 +118,7 @@ export default function Jobs() {
             <p className="no-results">No jobs found matching your criteria.</p>
           )}
         </div>
-          <button className="btn-load">Load More</button>
+        <button className="btn-load">Load More</button>
       </main>
     </div>
   );

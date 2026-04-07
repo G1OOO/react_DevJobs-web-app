@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import sun from "../../public/images/desktop/icon-sun.svg";
-import moon from "../../public/images/desktop/icon-moon.svg";
 import data from "../data.json";
 import "./JobDetail.css";
+
+const sun = "/images/desktop/icon-sun.svg";
+const moon = "/images/desktop/icon-moon.svg";
 
 export default function JobDetail() {
   const { id } = useParams();
@@ -49,7 +50,9 @@ export default function JobDetail() {
         <div className="job-content-card">
           <div className="content-top">
             <div className="title-group">
-              <p className="meta">{job.postedAt} • {job.contract}</p>
+              <p className="meta">
+                {job.postedAt} • {job.contract}
+              </p>
               <h1 className="detail-title">{job.position}</h1>
               <p className="location">{job.location}</p>
             </div>
